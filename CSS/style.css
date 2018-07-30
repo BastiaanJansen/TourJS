@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik:400,500,700,900');
+
+:root {
+    --main: #220A41;
+    --background: white;
+    --sidebar: rgba(0,0,0,.08);
+    --accent: #318CCF;
+}
+
+    /*var(--main-color); */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    font-family: 'Rubik', sans-serif;
+    color: #333;
+    overflow-x: hidden;
+    background-color: var(--background);
+    height: 100%;
+}
+
+p {
+    font-size: 16px;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    
+}
+
+h1, h2, h3, h4, h5, h6, ul, ol, li {
+    margin: 0;
+    padding: 0;
+}
+
+ul, ol {
+    list-style-type: : none;
+}
+
+::-moz-selection {
+    color: #fff;
+    background-color: #333;
+}
+
+::selection {
+    color: #fff;
+    background-color: #333;
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.container {
+    height: 100%;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 230px minmax(0px, 980px);
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "sidebar main";
+}
+
+.sidebar {
+    background-color: var(--sidebar);
+    position: relative;
+}
+
+.sidebar ul {
+    display: grid;
+    padding: 30px;
+    position: fixed;
+}
+
+.sidebar ul li {
+    height: 45px;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar ul li a {
+    color: #727272;
+    font-size: 17px;
+}
+
+.sidebar ul li a:hover {
+    filter: brightness(50%);
+}
+
+.main {
+    padding: 30px;
+}
+
+.disco {
+    animation: disco 5s linear infinite;
+}
+
+@keyframes disco {
+    0% {
+        background-color: #81BBE6;  
+    }
+    25% {
+        background-color: #DEE681;  
+    }
+    50% {
+        background-color: #81E6A7;
+    }
+    75% {
+        background-color: #BB81E6;
+    }
+    100% {
+        background-color: #81BBE6;
+    }
+}
+
+.main section {
+    margin-bottom: 25px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.19);
+}
+
+.main h1 {
+    font-size: 2.1em;
+    margin-bottom: 10px;
+    color: var(--main);
+    font-weight: 500;
+}
+
+.main h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #727272;
+    font-weight: 500;
+}
+
+.main a {
+    color: #2750C4;
+    font-weight: 500;
+}
+
+.main .demo {
+    color: #2750C4;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.main p {
+    line-height: 2em;
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+
+.main .highlight {
+    padding: 5px;
+    background-color: rgba(0,0,0,.08);
+    border-radius: 5px;
+    font-weight: 500;
+    color: var(--main);
+}
+
+pre {
+    background-color: rgba(0,0,0,.08);
+    border-radius: 5px;
+    position: relative;
+    margin-bottom: 20px;
+    display: flex;
+    align-self: center;
+    justify-content: left;
+    padding-left: 10px;
+}
+
+pre xmp {
+    white-space: pre-wrap;
+/*    left: -170px;*/
+    position: relative;
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--main);
+}
+
+
+
+
+/* Responsive */
+
+@media screen and (max-width: 800px) {
+    .grid {
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
+        grid-template-areas: 
+            "sidebar"
+            "main";
+    }
+    
+    .sidebar {
+        height: auto;
+    }
+    
+    .sidebar ul {
+        position: relative;
+        grid-template-columns: auto auto;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .sidebar ul {
+        position: relative;
+        grid-template-columns: auto;
+    }
+}
