@@ -16,6 +16,7 @@
 
 html {
     height: 100%;
+    overflow-x: hidden;
 }
 
 body {
@@ -244,10 +245,12 @@ pre {
 
 pre xmp {
     white-space: pre-wrap;
-    position: relative;
+    word-wrap: break-word;
     font-size: 17px;
     font-weight: 600;
     color: var(--main);
+    min-width: 0;
+    padding-right: 5px;
 }
 
 /* Animations */
@@ -283,7 +286,7 @@ pre xmp {
 
 @media screen and (max-width: 800px) {
     .grid {
-        grid-template-columns: auto;
+        grid-template-columns: minmax(0, 100%);
         grid-template-rows: auto auto;
         grid-template-areas: 
             "sidebar"

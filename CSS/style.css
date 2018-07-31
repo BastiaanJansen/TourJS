@@ -15,7 +15,7 @@
 }
 
 html {
-    height: 100%;
+    overflow-x: hidden;
 }
 
 body {
@@ -26,7 +26,6 @@ body {
     color: #333;
     overflow-x: hidden;
     background-color: var(--background);
-    height: 100%;
 }
 
 a:link {
@@ -109,6 +108,7 @@ a:link {
     align-self: center;
     justify-self: center;
     display: none;
+    margin-left: -30px;
     -webkit-animation: fadeInTop 0.3s backwards 0.2s ease-out;
     animation: fadeInTop 0.3s backwards 0.2s ease-out;
 }
@@ -333,10 +333,13 @@ pre {
 
 pre xmp {
     white-space: pre-wrap;
+    word-wrap: break-word;
     position: relative;
     font-size: 17px;
     font-weight: 600;
     color: white;
+    padding-right: 5px;
+    min-width: 0;
 }
 
 .theme-grid {
