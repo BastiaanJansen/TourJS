@@ -31,8 +31,6 @@ class Tour {
     addStep(name, info = {}) {
         var step = new Step(name, info.title, info.text, info.hook, info.timer, info.onShow, info.onHide, info.buttons, info.links);
         this.steps.push(step);
-        
-//        alert(this.steps[0].name);
     }
     
     start() {

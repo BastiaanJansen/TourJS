@@ -60,6 +60,7 @@
     color: var(--TourTextColor);
     -webkit-animation: none;
     animation: none;
+    margin: 0;
 }
 
 .tour .actionContainer {

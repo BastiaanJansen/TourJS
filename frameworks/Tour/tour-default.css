@@ -1,5 +1,5 @@
 :root {
-    --TourAccent: #0EA3C4;
+    --TourAccent: #318CCF;
     --TourBackground: #F3F3F3;
     --TourTitleBackground: #E0E0E0;
     --TourBorderRadius: 5px;
@@ -64,6 +64,7 @@
     color: var(--TourTextColor);
     -webkit-animation: none;
     animation: none;
+    margin: 0;
 }
 
 .tour .actionContainer {
