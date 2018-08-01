@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tour JS</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" href="CSS/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="IMAGES/logo.png">
+</head>
+<body>
+    <div class="nav">
+        <ul class="container big">
+            <li><a href="documentation.html">Documentation</a></li>
+            <li><a href="https://github.com/Bastiaan225/TourJS" target="_blank">Github</a></li>
+        </ul>
+    </div>
+
+    <div class="main container big">
+        <div class="start">
+            <div class="start-text">
+                <h1>Tour.JS</h1>
+                <p>Tour.JS is a javascript library for guiding users through your app. <br> Easily create advanced tours with text, links, buttons and custom scripts!</p>
+                <a class="button" id="demo">Demo Tour</a>
+                <a class="button" id="documentation" href="documentation.html">Documentation</a>
+                <a class="button" href="https://github.com/Bastiaan225/TourJS" target="_blank" href="">GitHub</a>
+            </div>
+        </div>
+        <div class="tour-containers">
+            <img id="tour-container-blue" src="IMAGES/tour-container-blue.png">
+            <img id="tour-container-red" src="IMAGES/tour-container-red.png">
+            <img id="tour-container-aqua" src="IMAGES/tour-container-aqua.png">
+        </div>
+        <img id="tour-container-grouped" src="IMAGES/tour-container-grouped.png">
+    </div>
+    
+    <div class="features">
+        <h1>Why Tour.JS?</h1>
+        <div class="container feature-grid">
+            <div id="feature-easy-to-install" class="feature-grid-item">
+                <i data-vi="cog" data-vi-primary="white" data-vi-accent="#220A41" data-vi-size="60"></i>
+                <h3>Easy to install</h3>
+                <p>Tour.JS is really easy to install! You only have to include jQuery, Tour.JS and a tour theme.</p>
+            </div>
+            
+            <div id="feature-easy-to-customize" class="feature-grid-item">
+                <i data-vi="equaliser" data-vi-primary="white" data-vi-accent="#220A41" data-vi-size="60"></i>
+                <h3>Easy to customize</h3>
+                <p>Do you want to customize the tour containers? You can just download another theme, edit the style sheet to make your own theme, or edit the tour container via Javascript!</p>
+            </div>
+            
+            <div id="feature-timer" class="feature-grid-item">
+                <i data-vi="clock" data-vi-primary="white" data-vi-accent="#220A41" data-vi-size="60"></i>
+                <h3>Timer</h3>
+                <p>You can easily add a timer to a step. After the set amount of time, the next step will appear.</p>
+            </div>
+            
+            <div id="feature-hooks" class="feature-grid-item">
+                <i data-vi="move" data-vi-primary="white" data-vi-accent="#220A41" data-vi-size="60"></i>
+                <h3>Hooks</h3>
+                <p>You can easily position each step because of hooks. Just set the hook to a class or id and Tour.JS will automatically position the step!</p>
+            </div>
+            
+            <div id="feature-links-and-buttons" class="feature-grid-item">
+                <i data-vi="layers" data-vi-primary="white" data-vi-accent="#220A41" data-vi-size="60"></i>
+                <h3>Links and buttons</h3>
+                <p>Easily create as many links and buttons as you want with each their own links and actions.</p>
+            </div>
+            
+            <div id="feature-custom-scripts" class="feature-grid-item">
+                <i data-vi="processor" data-vi-primary="white" data-vi-accent="#220A41" data-vi-size="60"></i>
+                <h3>Custom scripts</h3>
+                <p>With the onShow and onHide fields on the step object, you can easily add custom scripts when the step appears or disappears! The possibilities are endless!</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="themes">
+        <div class="container">
+            <h1>Themes</h1>
+            <div class="theme-grid">
+                <img src="IMAGES/tour-default.png">
+                <img src="IMAGES/tour-dark.png">
+            </div>
+        </div>
+    </div>
+    
+    <div class="implement">
+        <div class="container">
+            <h1>Implement Tour.JS</h1>
+            
+            <pre>
+                <xmp>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+                </xmp>
+            </pre>
+            
+            <pre>
+                <xmp>
+<script src="https://Bastiaan225.github.io/TourJS/frameworks/Tour/tour.js"></script>
+                </xmp>
+            </pre>
+            
+            <pre>
+                <xmp>
+<link rel="stylesheet" href="https://Bastiaan225.github.io/TourJS/frameworks/Tour/tour-default.css">
+                </xmp>
+            </pre>
+            
+            <div class="buttons">
+                <a class="button white" href="documentation.html">Documentation</a>
+                <a class="button white" href="https://github.com/Bastiaan225/TourJS" target="_blank">Github</a>
+            </div>
+            
+        </div>
+    </div>
+    
+    <div class="footer">
+        <div class="container">
+            <p>© Copyright 2018 Bastiaan Jansen. All rights reserved under MIT License.</p>
+        </div>
+    </div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://unpkg.com/vivid-icons" type="text/javascript"></script>
+<script src="frameworks/Tour/tour.js"></script>
+<link rel="stylesheet" href="frameworks/Tour/tour-default.css">
+
+<script>
+    
+    $("#demo").click(() => {
+        tour.start();
+    })
+    
+    const tour = new Tour("Demo");
+    
+    tour.style({
+        accentColor: "#2478b5"
+    });
+    
+    tour.addStep("first", {
+        title: "Welcome",
+        text: "Hello, welcome to the tour! Here you can download Tour.JS. Now I will show you what Tour.JS can do!",
+        hook: "#demo",
+        onShow: function() {
+            // Function
+        },
+        buttons: [
+            {
+                text: "Stop",
+                action: "tour.stop()"
+            },
+            {
+                text: "Start",
+                action: "tour.next()"
+            }
+        ],
+        links: [
+            {
+                text: "Documentation",
+                href: "documentation.html"
+            }
+        ]
+    });
+    
+    tour.addStep("customize-tour-container", {
+        title: "Customize",
+        text: "It is really easy to customize steps! You can use another tour theme, or target a specific step via it's name and customize it via CSS!",
+        hook: "#feature-easy-to-customize p",
+        onShow: function() {
+            $("html, body").animate({
+                scrollTop: 500
+            }, "slow");
+        },
+        buttons: [
+            {
+                text: "Previous",
+                action: "tour.previous()"
+            },
+            {
+                text: "Next",
+                action: "tour.next()"
+            }
+        ],
+        links: [
+            {
+                text: "Documentation",
+                href: "documentation.html"
+            }
+        ]
+    });
+    
+    tour.addStep("timer", {
+        title: "Timer",
+        text: "This step is running on a timer! After 5 seconds, the next step will appear.",
+        hook: "#feature-timer p",
+        timer: 5000,
+        onShow: function() {
+            
+        },
+        buttons: [
+            {
+                text: "Previous",
+                action: "tour.previous()"
+            }
+        ],
+        links: [
+            {
+                text: "Documentation",
+                href: "documentation.html"
+            }
+        ]
+    });
+    
+    tour.addStep("hooks", {
+        title: "Hooks",
+        text: "Hooks are very useful, it allows you to position the tour container the way you want! And it is also super easy!",
+        hook: "#feature-hooks p",
+        onShow: function() {
+            
+        },
+        buttons: [
+            {
+                text: "Previous",
+                action: "tour.previous()"
+            },
+            {
+                text: "Next",
+                action: "tour.next()"
+            }
+        ],
+        links: [
+            {
+                text: "Documentation",
+                href: "documentation.html"
+            }
+        ]
+    });
+    
+    tour.addStep("custom-scripts", {
+        title: "Custom Scripts",
+        text: "Custom scripts are really awesome! You can run any Javascript code you have written on show, and on hide!",
+        hook: "#feature-custom-scripts p",
+        onShow: function() {
+            $(".features").addClass("disco");
+        },
+        onHide: function() {
+            $(".features").removeClass("disco");  
+        },
+        buttons: [
+            {
+                text: "Previous",
+                action: "tour.previous()"
+            },
+            {
+                text: "Next",
+                action: "tour.next()"
+            }
+        ],
+        links: [
+            {
+                text: "Documentation",
+                href: "documentation.html"
+            }
+        ]
+    });
+    
+    tour.addStep("implement", {
+        title: "Implement Tour.JS",
+        text: "Just copy and paste the above lines of code in your project and you are done! It is that easy to install Tour.JS!",
+        hook: ".implement pre:nth-of-type(3)",
+        onShow: function() {
+            $(".footer p").animate({
+                padding: "50px 0"
+            });
+        },
+        onHide: function() {
+            $(".footer p").animate({
+                padding: "30px 0"
+            });  
+        },
+        buttons: [
+            {
+                text: "Previous",
+                action: "tour.previous()"
+            },
+            {
+                text: "Next",
+                action: "tour.next()"
+            }
+        ],
+        links: [
+            {
+                text: "Documentation",
+                href: "documentation.html"
+            }
+        ]
+    });
+    
+    tour.addStep("documentation", {
+        title: "Documentation",
+        text: "Need a little help? Just read the documentation! Every option and feature is explained there!",
+        hook: "#documentation",
+        onShow: function() {
+            tour.setScroll(false);
+            $("html, body").animate({
+                scrollTop: 0
+            }, "slow");
+        },
+        onHide: function() {
+            tour.setScroll(true);  
+        },
+        buttons: [
+            {
+                text: "Previous",
+                action: "tour.previous()"
+            },
+            {
+                text: "Finish",
+                action: "tour.next()"
+            }
+        ],
+        links: [
+            {
+                text: "Documentation",
+                href: "documentation.html"
+            }
+        ]
+    });
+    
+</script>
+
+</body>
+</html>
