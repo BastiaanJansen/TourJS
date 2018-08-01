@@ -1,7 +1,15 @@
+[website]: https://bastiaan225.github.io/TourJS/
+
 # TourJS
 Tour.JS is a javascript library for guiding users through your app.
 
-Go for documentation and feature list to my [website](https://bastiaan225.github.io/TourJS/)
+Go for documentation and feature list to my [website][website].
+
+<p align="center">
+    <a href="https://bastiaan225.github.io/TourJS/">
+        <img src="https://github.com/Bastiaan225/TourJS/blob/master/IMAGES/tour-container-grouped.png">
+    </a>
+</p>
 
 **Install**
 ---
@@ -88,7 +96,7 @@ tour.addStep('userInfo', {
 
 [Full Documentation](https://bastiaan225.github.io/TourJS/documentation.html)
 
-[Website](https://bastiaan225.github.io/TourJS/)
+[Website][website]
 
 **Licence**
 ---
