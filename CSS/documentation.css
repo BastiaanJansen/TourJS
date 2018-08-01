@@ -15,10 +15,12 @@
 }
 
 html {
-    height: 100%;
+/*    height: 100%;*/
     overflow-x: hidden;
+/*
     overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
+*/
 }
 
 body {
@@ -29,7 +31,7 @@ body {
     color: #333;
     overflow-x: hidden;
     background-color: var(--background);
-    height: 100%;
+/*    height: 100%;*/
 }
 
 a:link {

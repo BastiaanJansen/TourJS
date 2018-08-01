@@ -17,6 +17,7 @@
     z-index: 1000;
     margin-top: 50px;
     opacity: 0;
+    text-align: left;
 }
 
 .tour .tour-arrow {
@@ -41,6 +42,10 @@
     font-size: 19px;
     font-weight: 500;
     color: var(--TourTextColor);
+    -webkit-animation: none;
+    animation: none;
+    margin: 0;
+    padding: 0;
 }
 
 .tour .mainContainer {
@@ -53,6 +58,8 @@
     line-height: normal;
     font-size: 16px;
     color: var(--TourTextColor);
+    -webkit-animation: none;
+    animation: none;
 }
 
 .tour .actionContainer {
@@ -64,6 +71,8 @@
     font-size: 13px;
     margin-right: 5px;
     font-weight: normal;
+    -webkit-animation: none;
+    animation: none;
 }
 
 .tour .actionContainer button {
@@ -76,6 +85,8 @@
     cursor: pointer;
     outline: none;
     border-radius: var(--TourBorderRadius);
+    -webkit-animation: none;
+    animation: none;
 }
 
 .tour .actionContainer a:hover {

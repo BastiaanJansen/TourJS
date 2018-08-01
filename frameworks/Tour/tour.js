@@ -9,6 +9,8 @@ class Tour {
         this.accentColor;
         this.borderRadius;
         
+        this.scroll = true;
+        
     }
     
     style(info = {}) {
@@ -78,7 +80,19 @@ class Tour {
         }
     }
     
+    setScroll(value) {
+        this.scroll = value;
+    }
+    
+    getScroll() {
+        return this.scroll;
+    }
+    
     show(stepIndex) {
+        
+        if (this.steps[stepIndex].onShow != undefined) {
+            this.steps[stepIndex].onShow();
+        };
         
         $.fn.isInViewport = function() {
             var elementTop = $(this).offset().top;
@@ -90,20 +104,23 @@ class Tour {
             return elementBottom > viewportTop && elementTop < viewportBottom;
         };
         
-        if (!$(this.steps[stepIndex].hook).isInViewport()) {
-            $('html,body').animate({scrollTop: $(this.steps[stepIndex].hook).offset().top},'slow');
+        if (!$(this.steps[stepIndex].hook).isInViewport() && this.getScroll()) {
+            $('html,body').animate({
+                scrollTop: $(this.steps[stepIndex].hook).offset().top
+            },'slow');
         };
         
         this.currentStep = stepIndex;
         var hook = this.steps[stepIndex].hook;
         
         this.box = $("<div class='tour'></div>");
+        this.box.attr("id", this.steps[stepIndex].name);
         var titleContainer = $("<div class='titleContainer'></div>");
         var mainContainer = $("<div class='mainContainer'></div>");
         var actionContainer = $("<div class='actionContainer'></div>");
         var arrow = $("<div class='tour-arrow'></div>");
         
-        $(hook).append(this.box);
+        $(hook).after(this.box);
         $(this.box).append(arrow);
         $(this.box).append(titleContainer);
         $(titleContainer).append("<h3>" + this.steps[stepIndex].title + "</h3>");
@@ -139,10 +156,6 @@ class Tour {
             this.timeout = setTimeout(function() {
                 self.next();
             }, this.steps[stepIndex].timer);
-        }
-        
-        if (this.steps[stepIndex].onShow != undefined) {
-            this.steps[stepIndex].onShow();
         }
     }
     

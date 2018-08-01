@@ -224,8 +224,12 @@ a:link {
     padding-bottom: 30px;
 }
 
+.features.disco {
+    -webkit-animation: disco 5s infinite;
+    animation: disco 5s infinite;
+}
+
 .features h1 {
-    width: 100%;
     padding: 30px 0;
     text-align: center;
     color: white;
@@ -300,7 +304,6 @@ a:link {
 }
 
 .implement h1 {
-    width: 100%;
     padding: 30px 0;
     text-align: center;
     color: white;
@@ -312,7 +315,6 @@ a:link {
 }
 
 .themes h1 {
-    width: 100%;
     padding: 30px 0;
     text-align: center;
     color: var(--main);
@@ -369,6 +371,27 @@ pre xmp {
     padding: 30px 0;
 }
 
+#customize-tour-container {
+    background-color: #aa3737;
+}
+
+#customize-tour-container p, #customize-tour-container h3 {
+    color: white;
+}
+
+#customize-tour-container .titleContainer, #customize-tour-container .tour-arrow {
+    background-color: #862020;
+}
+
+#customize-tour-container button {
+    background-color: white;
+    color: #aa3737;
+}
+
+#customize-tour-container a {
+    color: white;
+}
+
 /* Animations */
 
 @-webkit-keyframes fadeInTop {
@@ -395,6 +418,42 @@ pre xmp {
         transform: rotate(xx) translateY(0);
         opacity: 1;
         }
+}
+
+@-webkit-keyframes disco {
+    0% {
+        background-color: #DEE681;
+    }
+    25% {
+        background-color: #81E4E6;
+    }
+    50% {
+        background-color: #81E689;
+    }
+    75% {
+        background-color: #E681B2;
+    }
+    100% {
+        background-color: #DEE681;
+    }
+}
+
+@keyframes disco {
+    0% {
+        background-color: #DEE681;
+    }
+    25% {
+        background-color: #81E4E6;
+    }
+    50% {
+        background-color: #81E689;
+    }
+    75% {
+        background-color: #E681B2;
+    }
+    100% {
+        background-color: #DEE681;
+    }
 }
 
 
