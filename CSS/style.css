@@ -126,6 +126,8 @@ a:link {
 #tour-container-blue {
     margin-top: 30px;
     margin-left: -180px;
+    
+    
     -webkit-animation: fadeInTop 0.4s backwards 0.4s ease-out;
     animation: fadeInTop 0.4s backwards 0.4s ease-out;
 }
@@ -234,7 +236,8 @@ a:link {
 .feature-grid {
     display: grid;
     grid-gap: 20px;
-    grid-template-columns: repeat(3, 1fr);
+/*    grid-template-columns: repeat(3, 1fr);*/
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
 .feature-grid-item {
@@ -403,6 +406,10 @@ pre xmp {
         grid-template-rows: 300px 350px;
     }
     
+    .main .tour-containers {
+        width: 100%;
+    }
+    
     .start {
         grid-column: span 2;
         grid-row: 1;
@@ -424,12 +431,24 @@ pre xmp {
         grid-column: span 2;
         grid-row: 2; 
     }
+    
+    .nav ul {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        grid-gap: 30px;
+    }
+    
+    .nav ul li {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        margin-right: 0;
+    }
 }
 
 @media screen and (max-width: 800px) {
-    .feature-grid {
-        grid-template-columns: 1fr 1fr;
-    }
+    
 }
 
 @media screen and (max-width: 770px) {
@@ -445,10 +464,6 @@ pre xmp {
 }
 
 @media screen and (max-width: 630px) {
-    .feature-grid {
-        grid-template-columns: 1fr;
-    }
-    
     #tour-container-blue, #tour-container-red, #tour-container-aqua {
         display: none;
     }
