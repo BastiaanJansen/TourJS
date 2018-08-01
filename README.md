@@ -1,7 +1,7 @@
 # TourJS
 Tour.JS is a javascript library for guiding users through your app.
 
-Go for documentation and feature list to: https://bastiaan225.github.io/TourJS/
+Go for documentation and feature list to my [website](https://bastiaan225.github.io/TourJS/)
 
 **Install**
 ---
@@ -27,3 +27,33 @@ After you have included the library, you must include one of the tour themes.
 ```
 <link rel="stylesheet" href="https://Bastiaan225.github.io/TourJS/frameworks/Tour/tour-dark.css">           
 ```
+
+**Usage**
+---
+```
+const tour = new Tour("Name");
+```
+
+```
+tour.addStep("first", {
+    title: "The Beginning",
+    text: "Hello, welcome to the tour! In this container you can explain 
+    the user what he or she can do.",
+    hook: ".container",
+    buttons: [
+        {
+            text: "Stop",
+            action: "tour.stop()"
+        },
+        {
+            text: "Start",
+            action: "tour.next()"
+        }
+    ]
+});
+           
+```
+
+[Full Documentation](https://bastiaan225.github.io/TourJS/documentation.html)
+
+[Website](https://bastiaan225.github.io/TourJS/)
