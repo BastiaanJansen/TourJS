@@ -57,3 +57,7 @@ tour.addStep("first", {
 [Full Documentation](https://bastiaan225.github.io/TourJS/documentation.html)
 
 [Website](https://bastiaan225.github.io/TourJS/)
+
+**Licence**
+---
+[MIT Licence](https://github.com/Bastiaan225/TourJS/blob/master/LICENSE)
