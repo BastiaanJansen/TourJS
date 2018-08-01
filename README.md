@@ -98,6 +98,17 @@ tour.addStep('userInfo', {
 });
 ```
 
+**Styling**
+---
+```javascript
+tour.style({
+    titleBackground: "#E0E0E0",
+    background: "#F3F3F3",
+    accentColor: "#0EA3C4",
+    borderRadius: "5px"
+});
+```
+
 [Full Documentation](https://bastiaan225.github.io/TourJS/documentation.html)
 
 [Website][website]
