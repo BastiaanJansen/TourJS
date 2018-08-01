@@ -13,3 +13,17 @@ To get started with Tour.JS, you just need to include Tour.JS, jQuery and a tour
 ```
 <script src="https://Bastiaan225.github.io/TourJS/frameworks/Tour/tour.js"></script>
 ```
+
+**Themes**
+
+After you have included the library, you must include one of the tour themes.
+
+*Default*
+```
+<link rel="stylesheet" href="https://Bastiaan225.github.io/TourJS/frameworks/Tour/tour-default.css">
+```
+
+*Dark*
+```
+<link rel="stylesheet" href="https://Bastiaan225.github.io/TourJS/frameworks/Tour/tour-dark.css">           
+```
