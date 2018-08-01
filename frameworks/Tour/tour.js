@@ -90,6 +90,9 @@ class Tour {
     
     show(stepIndex) {
         
+        this.currentStep = stepIndex;
+        var hook = this.steps[stepIndex].hook;
+        
         if (this.steps[stepIndex].onShow != undefined) {
             this.steps[stepIndex].onShow();
         };
@@ -104,14 +107,11 @@ class Tour {
             return elementBottom > viewportTop && elementTop < viewportBottom;
         };
         
-        if (!$(this.steps[stepIndex].hook).isInViewport() && this.getScroll()) {
+        if (!$(hook).isInViewport() && this.getScroll()) {
             $('html,body').animate({
                 scrollTop: $(this.steps[stepIndex].hook).offset().top
             },'slow');
         };
-        
-        this.currentStep = stepIndex;
-        var hook = this.steps[stepIndex].hook;
         
         this.box = $("<div class='tour'></div>");
         this.box.attr("id", this.steps[stepIndex].name);
