@@ -37,8 +37,7 @@ const tour = new Tour("Name");
 ```javascript
 tour.addStep("first", {
     title: "The Beginning",
-    text: "Hello, welcome to the tour! In this container you can explain 
-    the user what he or she can do.",
+    text: "Hello, welcome to the tour! In this container you can explain the user what he or she can do.",
     hook: ".container",
     buttons: [
         {
