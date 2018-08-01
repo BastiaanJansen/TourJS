@@ -30,11 +30,15 @@ After you have included the library, you must include one of the tour themes.
 ```html
 <link rel="stylesheet" href="https://Bastiaan225.github.io/TourJS/frameworks/Tour/tour-default.css">
 ```
+![Default Theme](https://github.com/Bastiaan225/TourJS/blob/master/IMAGES/tour-default.png)
 
 *Dark:*
 ```html
 <link rel="stylesheet" href="https://Bastiaan225.github.io/TourJS/frameworks/Tour/tour-dark.css">           
 ```
+![Default Theme](https://github.com/Bastiaan225/TourJS/blob/master/IMAGES/tour-dark.png)
+
+You can also create your own theme, edit a theme via Javascript and edit specific steps via CSS with the step name!
 
 **Usage**
 ---
