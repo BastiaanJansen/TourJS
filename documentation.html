@@ -187,7 +187,6 @@ tour.addStep('userInfo', {
                 <span class="highlight">Background:</span> Change the background of the text container <br>
                 <span class="highlight">AccentColor:</span> Change the accent color <br>
                 <span class="highlight">BorderRadius:</span> Change the border radius of the tour container <br>
-                You can of course also edit the style sheet to create your own theme.
             </p>
             
             <pre>
@@ -200,6 +199,34 @@ tour.style({
 });
                 </xmp>
             </pre>
+            
+            <p>You can also target the step name in CSS and edit it that way or create your own tour theme.</p>
+            
+            <pre>
+                <xmp>
+#tour-name {
+    background-color: #aa3737;
+}
+
+#tour-name p, #tour-name h3 {
+    color: white;
+}
+
+#tour-name .titleContainer, #tour-name .tour-arrow {
+    background-color: #862020;
+}
+
+#tour-name button {
+    background-color: white;
+    color: #aa3737;
+}
+
+#tour-name a {
+    color: white;
+}
+                </xmp>
+            </pre>
+            
         </section>
         
         <section id="start">
