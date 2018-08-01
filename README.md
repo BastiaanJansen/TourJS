@@ -18,12 +18,12 @@ To get started with Tour.JS, you just need to include Tour.JS, jQuery and a tour
 
 After you have included the library, you must include one of the tour themes.
 
-*Default*
+*Default:*
 ```html
 <link rel="stylesheet" href="https://Bastiaan225.github.io/TourJS/frameworks/Tour/tour-default.css">
 ```
 
-*Dark*
+*Dark:*
 ```html
 <link rel="stylesheet" href="https://Bastiaan225.github.io/TourJS/frameworks/Tour/tour-dark.css">           
 ```
@@ -34,6 +34,7 @@ After you have included the library, you must include one of the tour themes.
 const tour = new Tour("Name");
 ```
 
+*Simple Step:*
 ```javascript
 tour.addStep("first", {
     title: "The Beginning",
@@ -41,8 +42,8 @@ tour.addStep("first", {
     hook: ".container",
     buttons: [
         {
-            text: "Stop",
-            action: "tour.stop()"
+            text: "Previous",
+            action: "tour.previous()"
         },
         {
             text: "Start",
@@ -51,6 +52,38 @@ tour.addStep("first", {
     ]
 });
            
+```
+
+*Advanced Step:*
+```javascript
+tour.addStep('userInfo', {
+    title: "User Info",
+    text: "In this container you can explain the user what he or she can do.",
+    hook: ".user_info",
+    timer: 5000,
+    onShow: function() {
+        // Custom Function
+    },
+    onHide: function() {
+        // Custom Function
+    },
+    buttons: [
+        {
+            text: "Previous",
+            action: "tour.previous()"
+        },
+        {
+            text: "Next",
+            action: "tour.next()"
+        }
+    ],
+    links: [
+        {
+            text: "More info?",
+            href: "info.html"
+        }
+    ]
+});
 ```
 
 [Full Documentation](https://bastiaan225.github.io/TourJS/documentation.html)
