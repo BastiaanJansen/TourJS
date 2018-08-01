@@ -309,5 +309,6 @@ pre xmp {
     .sidebar ul {
         position: relative;
         grid-template-columns: auto;
+        display: none;
     }
 }
