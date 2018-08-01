@@ -3,7 +3,7 @@
 # TourJS
 Tour.JS is a javascript library for guiding users through your app.
 
-Go for documentation, feature list and demp to my [website][website].
+Go for documentation, feature list and demo to my [website][website].
 
 <p align="center">
     <a href="https://bastiaan225.github.io/TourJS/">
